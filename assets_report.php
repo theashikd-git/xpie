@@ -1,6 +1,10 @@
 <?php
 include 'db.php';
-
+session_start();
+if(!isset($_SESSION['user_id']) || $_SESSION['role']!='user'){
+    header("Location: login.php");
+    exit;
+}
 $result = mysqli_query($conn,"
 SELECT 
     a.product_name,
@@ -29,15 +33,19 @@ ORDER BY a.product_name ASC
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">NAMIAS</a>
-    <div class="collapse navbar-collapse">
+    <a class="navbar-brand" href="dashboard.php">NAMIAS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="assets.php">Assets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="asset_report.php">Asset Report</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link " href="assets.php">Asset Management</a></li>
+		<li class="nav-item"><a class="nav-link active" href="assets_report.php">Asset Report</a></li>
+        <li class="nav-item"><a class="nav-link" href="ip_allocation.php">IP Allocation</a></li>
+        <li class="nav-item"><a class="nav-link" href="wishlist.php">Wishlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin_panel.php">Admin Panel</a></li>
       </ul>
     </div>
   </div>
