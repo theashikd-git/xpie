@@ -1,6 +1,10 @@
 <?php
 include 'db.php';
-
+session_start();
+if(!isset($_SESSION['user_id']) || $_SESSION['role']!='user'){
+    header("Location: login.php");
+    exit;
+}
 /* ================= IP RANGE FUNCTION ================= */
 function ipInRange($ip, $cidrMask) {
 
@@ -97,21 +101,12 @@ $result = mysqli_query($conn,"SELECT * FROM ip_allocations ORDER BY id ASC");
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="dashboard.php">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="assets.php">Assets</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="ip_allocation.php">IP Allocation</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="wishlist.php">Wishlist</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin_panel.html">Admin Panel</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link " href="assets.php">Asset Management</a></li>
+		<li class="nav-item"><a class="nav-link " href="assets_report.php">Asset Report</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ip_allocation.php">IP Allocation</a></li>
+        <li class="nav-item"><a class="nav-link" href="wishlist.php">Wishlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin_panel.php">Admin Panel</a></li>
       </ul>
     </div>
   </div>
