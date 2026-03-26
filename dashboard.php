@@ -1,6 +1,10 @@
 <?php
 include 'db.php';
-
+session_start();
+if(!isset($_SESSION['user_id']) || $_SESSION['role']!='user'){
+    header("Location: login.php");
+    exit;
+}
 /* ================= ASSET OVERVIEW ================= */
 $assets = mysqli_query($conn,"
 SELECT product_name, department, SUM(quantity) as total_qty
@@ -98,6 +102,25 @@ body {
     font-size: 13px;
     color: #6c757d;
 }
+.sidebar-logout {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #ff6b6b;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid #343a40;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-logout:hover {
+    background: #343a40;
+    color: #ff4c4c;
+}
+
+.sidebar-logout svg {
+    fill: currentColor;
+   
 </style>
 </head>
 
@@ -107,13 +130,24 @@ body {
 <div class="row">
 
 <!-- Sidebar -->
-<div class="col-md-2 sidebar p-0">
-<h4 class="text-center py-3 border-bottom">XPie</h4>
-<a href="dashboard.php">Dashboard</a>
-<a href="assets.php">Assets</a>
-<a href="ip_allocation.php">IP Allocation</a>
-<a href="wishlist.php">Wishlist</a>
-<a href="admin_panel.php">Admin Panel</a>
+<div class="col-md-2 sidebar p-0 d-flex flex-column">
+    <h4 class="text-center py-3 border-bottom">XPie</h4>
+    <a href="dashboard.php">Dashboard</a>
+    <a href="assets.php">Asset Management</a>
+    <a href="assets_report.php">Asset Report</a>
+    <a href="ip_allocation.php">IP Allocation</a>
+    <a href="wishlist.php">Wishlist</a>
+
+    <!-- Spacer -->
+    <div class="mt-auto"></div>
+
+<!-- Sidebar Logout -->
+<a href="logout.php" class="sidebar-logout">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right me-2" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 3a.5.5 0 0 1 .5.5v2.5H13a.5.5 0 0 1 0 1H6.5V10a.5.5 0 0 1-1 0V3.5A.5.5 0 0 1 6 3zm-1 4.5a.5.5 0 0 0-.5-.5H2.5a.5.5 0 0 0 0 1H4.5a.5.5 0 0 0 .5-.5z"/>
+    </svg>
+    Logout
+</a>
 </div>
 
 <!-- Main Content -->
