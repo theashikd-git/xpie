@@ -52,7 +52,7 @@ WHERE warranty_end IS NOT NULL
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>NAMIAS Dashboard</title>
+<title>Xpie Dashboard</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 body { background-color: #f4f6f9; overflow-x: hidden; }
@@ -76,13 +76,12 @@ body { background-color: #f4f6f9; overflow-x: hidden; }
 
 <!-- Sidebar -->
 <div class="col-md-2 sidebar p-0 d-flex flex-column">
-    <h4 class="text-center py-3 border-bottom">NAMIAS</h4>
+    <h4 class="text-center py-3 border-bottom">Xpie</h4>
     <a href="admin_dashboard.php">Dashboard</a>
     <a href="admin_assets.php">Asset Management</a>
     <a href="admin_assets_report.php">Asset Report</a>
     <a href="admin_ip_allocation.php">IP Allocation</a>
     <a href="admin_wishlist.php">Wishlist</a>
-    <a href="admin_panel.php">Admin Panel</a>
     <div class="mt-auto"></div>
     <a href="logout.php" class="sidebar-logout">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right me-2" viewBox="0 0 16 16">
