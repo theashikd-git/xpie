@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/theashikd-git/test/main/admin/Profile.png" alt="Xpie Logo" width="150"/>
+<img src="https://raw.githubusercontent.com/theashikd-git/test/main/admin/Profile.jpg" alt="Xpie Logo" width="150"/>
 
 # Xpie — Network Asset Management System
 
