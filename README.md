@@ -1,8 +1,24 @@
-# Xpie — Network Asset Management System
+<div align="center">
 
-A web-based administration system built for managing IT assets, network IP allocations, and procurement wishlists within an organisation. Designed to give IT administrators a centralised dashboard to track hardware, monitor warranty status, and manage network configurations.
+<img src="https://img.shields.io/badge/Xpie-Network%20Asset%20Management-0d6efd?style=for-the-badge&logoColor=white" alt="Xpie Banner"/>
 
----
+# 🖧 Xpie — Network Asset Management System
+
+**A web-based administration system built for managing IT assets, network IP allocations,**  
+**and procurement wishlists within an organisation.**
+
+Designed to give IT administrators a centralised dashboard to track hardware,  
+monitor warranty status, and manage network configurations.
+
+<br/>
+
+[![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://mysql.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![jQuery](https://img.shields.io/badge/jQuery-3.7-0769AD?style=flat-square&logo=jquery&logoColor=white)](https://jquery.com)
+[![Apache](https://img.shields.io/badge/Server-XAMPP-D22128?style=flat-square&logo=apache&logoColor=white)](https://apachefriends.org)
+
+</div>
 
 ## 📋 Table of Contents
 
