@@ -111,6 +111,48 @@ xpie/
 ```
 
 ---
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/theashikd-git/xpie.git
+   ```
+
+2. **Move the project to your server root**
+   ```
+   XAMPP: C:/xampp/htdocs/xpie
+   WAMP:  C:/wamp64/www/xpie
+   ```
+
+3. **Import the database**
+   - Open **phpMyAdmin**
+   - Create a new database named `xpie_dp`
+   - Import the `sql.sql` file from the project root
+
+4. **Configure the database connection**
+   - Open `db.php`
+   - Update the credentials if needed:
+     ```php
+     $host = "localhost";
+     $user = "root";
+     $pass = "";
+     $db   = "xpie_dp";
+     ```
+
+5. **Run the project**
+   - Start Apache and MySQL from XAMPP/WAMP
+   - Open your browser and go to:
+     ```
+     http://localhost/xpie/login.php
+     ```
+
+6. **Default login credentials**
+   ```
+   Username: admin
+   Password: admin123
+   ```
+
+---
 
 ## Author
 
