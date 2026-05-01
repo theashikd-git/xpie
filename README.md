@@ -103,10 +103,10 @@ xpie/
 ├── login.php               # Login page
 ├── logout.php              # Session destroy & redirect
 ├── dashboard.php           # Admin dashboard overview
-├── assets.php        # Asset management (CRUD)
-├── assets_report.php # Asset quantity report
-├── ip_allocation.php # IP & VLAN management (CRUD)
-├── wishlist.php      # Wishlist/procurement requests
+├── assets.php              # Asset management (CRUD)
+├── assets_report.php       # Asset quantity report
+├── ip_allocation.php       # IP & VLAN management (CRUD)
+├── wishlist.php            # Wishlist/procurement requests
 └── sql.sql                 # Database schema and seed data
 ```
 
